@@ -1,0 +1,48 @@
+/* reset default styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global body styling. make the skeletal grid structure and add background color */
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(118, 184, 245);
+    gap: 0.8rem;
+    padding: 0.5rem;
+}
+
+/* global styling for all images */
+img{
+    width: 100%;
+    height: 66vh;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    border: 5px solid white;
+}
+
+/* styling for containers with two images */
+.left > div,
+.right > div{
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* styling for images in dual containers */
+.left > div > img,
+.right > div > img{
+    width: 50%;
+    height: 30vh;
+}
+
+/* separate styling for left dual container images */
+.left > div > img{
+    margin-top: 0.2rem;
+}
+
+/* separate styling for right dual container images */
+.right > div > img{
+    margin-bottom: 0.4rem;
+}

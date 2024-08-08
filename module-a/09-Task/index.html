@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09- Task</title>
+    <script src="js/tailwindcss-3.4.4.js"></script>
+    <link rel="stylesheet" href="css/daisyui.min.css">
+</head>
+<body class="min-h-[100vh] flex justify-center items-center bg-slate-400">
+    <main>
+        <h1 class="text-slate-800 text-3xl text-center p-4 underline underline-offset-4">09- Task</h1>
+        <div class="artboard phone-1 bg-slate-300 rounded-md p-4">
+                <table class="table bg-slate-800 text-slate-400" id="data">
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                      <th>[1, 2, 3, 4, 5]</th>
+                      <td>9</td>
+                    </tr>
+                </table>
+        </div>
+    </main>
+    <script>
+        // get reference to output element
+        const data = document.getElementById('data')
+        // function to get sum of two largest elements
+        function sumTwoLargest(array){
+            // return 0 if array length is less than 2
+            if(array.length < 2){
+                return 0;
+            }
+            // sort and reverse array
+            const newArr = array.sort().reverse()
+            
+            // return sum of largest 2
+            return newArr[0] + newArr[1]
+        }
+        // snippet to append results of testcases to DOM
+        const testCases = [[1,2,3,4,5], [5,5,5,5,5], [1], []]
+        testCases.forEach(test => {
+            data.innerHTML += `<tr>
+                      <th>[${test}]</th>
+                      <td>${sumTwoLargest(test)}</td>
+                      </tr>
+            `
+        })
+    </script>
+</body>
+</html>

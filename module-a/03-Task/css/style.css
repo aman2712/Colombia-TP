@@ -1,0 +1,81 @@
+/* Work here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* overall body styling */
+body{
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* general styling for all sections and divs */
+section, div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/* scoped styling for elements on different positions */
+.upper{
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 1rem;
+}
+
+.lower{
+    display: flex;
+    height: calc(80vh - 4rem);
+    border: none;
+    gap: 1rem;
+}
+
+.lower-right{
+    flex: 0.7;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.lower-right-up{
+    height: 30%;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.lower-right-down{
+    height: 67%;
+    display: flex;
+    gap: 1rem;
+    border: none;
+}
+
+.lower-right-down > div{
+    flex: 1;
+    height: 100%;
+}
+
+.lower-left{
+    flex: 0.3;
+    height: 100%;
+}
+
+/* media query to change layout at 768px */
+@media screen and (max-width: 768px) {
+    .lower{
+        display: block;
+    }
+    .lower-left{
+        margin-top: 1rem;
+    }
+    .lower-right,.lower-left{
+        height: 50%;
+    }
+}
